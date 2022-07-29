@@ -1,0 +1,11 @@
+version: "3"
+services:
+  webcheck:
+    build: .
+    volumes:
+      - '.:/webcheck'
+    environment:
+      API_KEY: ${API_KEY}
+      RECV_EMAIL: ${RECV_EMAIL}
+      SEND_EMAIL: ${SEND_EMAIL}
+      WEBSITE: ${WEBSITE}
