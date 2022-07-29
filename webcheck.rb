@@ -18,5 +18,5 @@ while true
   if page != Net::HTTP.get(URI ENV['WEBSITE']).to_s
     send_em(Mail.new(from, subject, to, content))
     end
-  sleep(1.day)
+  sleep(60*60*24)
 end
